@@ -83,3 +83,18 @@ form button:active {
   padding: 10px 20px;
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
+@media only screen and (max-width:437px){
+  form button {
+    margin-top: 25vh;
+    padding: 7px 12px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 8px;
+    font-size: 16px;
+    margin: 3vh 0 0 0;
+    background-color: #0a8bc7;
+    color: #FFFFFF;
+    transition: all 0.3s;
+  }
+}
+
