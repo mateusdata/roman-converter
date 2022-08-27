@@ -7,7 +7,7 @@ const romans = {
   4: ['M', 'MM', 'MMM']
 }
 
-const romanLetters = { "I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "M": 1000 }
+const romanLetters = { "I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "M": 1000, "D":500 }
 
 function App() {
   const [input, setInput] = useState("")
