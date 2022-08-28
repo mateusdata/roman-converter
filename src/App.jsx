@@ -7,7 +7,7 @@ const romans = {
   4: ['M', 'MM', 'MMM']
 }
 
-const romanLetters = { "I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "M": 1000, "D":500 }
+const romanLetters = { "I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D":500, "M": 1000 }
 
 function App() {
   const [input, setInput] = useState("")
@@ -19,6 +19,13 @@ function App() {
 
     if (!isNaN(Number(input)) && (+input < 1 || +input > 3999)) {
       setError("Valor inválido! Informe um valor entre 1 e 3999!")
+      setOutput("")
+      return
+    }
+
+    if(input.toLocaleUpperCase().split("").some(el => romanLetters[el] === undefined) && isNaN(Number(input))) {
+      setError("Valor inválido! Essa expressão não existe em algarismos romanos.")
+      setOutput("")
       return
     }
 
